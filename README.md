@@ -7,6 +7,6 @@
 ***
 ## EN  
   Code writen for a semestral project proposed by the Introduction to Eletrical Engeneering class at University of São Paulo. The project consists of a sanitizing box that uses UV-C technology to kill the new COVID-19 that could be on the surface of day to day objects like smartphones, wallets, keys etc.\
-  Due to the global crysis I couldn't have all the components by the time of completion of the course, so, there will be two versions of the code. The simpler one, replaces the prints that would've been done on a LCD screen by prints on the serial monitor. The second one does all taks as if the project had all parts (lamps, LCD screen, relays, etc).\
+  Due to the global crysis I couldn't have all the components by the end of the course, so, there will be two versions of the code. The simpler one, replaces the prints that would've been done on a LCD screen by prints on the serial monitor. The second one does all taks as if the project had all parts (lamps, LCD screen, relays, etc).\
   Although there were made several researches on scientific literature to create this solution and to guarantee the aplicability to the real world, this is a **case study** and maybe this is not enough to eliminate completely the viral load on such objects.\
   The project as a whole was developed by Arthur Belli (me), Alessandro Alves, Daniel Milagre, Luis Bertolani and Matheus Archangelo.
