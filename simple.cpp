@@ -5,14 +5,14 @@ short relayPort = 8;
 short stdMinutes = 15;
 short stdSeconds = 0;
 short minutes, seconds;
-bool primeiraVez;
+bool firstTime; //wether show greeting or not
 
 void setup() {
   pinMode(doorPort, INPUT);
   pinMode(relayPort, OUTPUT);
   digitalWrite(relayPort, LOW);
   Serial.begin(9600);
-  primeiraVez = true; //wether the display message should appear (only on the first time)
+  firstTime = true; 
   minutes = stdMinutes;
   seconds = stdSeconds;
 }
@@ -30,7 +30,7 @@ void PrintTime() {
   }
 }
 
-void PrintTimer() {
+void PrintTimer1() {
   for (int i = 5; i; i--) {
     Serial.print("Vamos comecar em ");
     Serial.println(i);
@@ -40,19 +40,22 @@ void PrintTimer() {
 
 void loop() {
   while(!digitalRead(doorPort)) { //wether the door is open
-    digitalWrite(relayPort, LOW); //turns off the relay bc the door if the door is open
+    digitalWrite(relayPort, LOW); //turns off the relay because the door is open
     Serial.println("Por favor feche a porta");
+    firstTime = true;
+    minutes = stdMinutes;
+    seconds = stdSeconds;
   }
   if (minutes + seconds) {
-    if (primeiraVez) {
-      primeiraVez = false;
-      PrintTimer();
-      digitalWrite(relayPort, HIGH); //turns on the relays
+    if (firstTime) {
+      firstTime = false;
+      PrintTimer1();
+      digitalWrite(relayPort, HIGH); //turns on the relays for the first time
     }
     PrintTime();
-    digitalWrite(relayPort, HIGH);
+    digitalWrite(relayPort, HIGH); // 
   } else {
-    digitalWrite(relayPort, LOW); //turns off the the relays bc the time ran off
+    digitalWrite(relayPort, LOW); //turns off the relays because the time ran off
     Serial.println("Limpeza concluida. Tenha um bom dia");
     delay(4000);
   }
