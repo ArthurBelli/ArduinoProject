@@ -10,3 +10,12 @@
   Due to the global crysis I couldn't have all the components by the end of the course, so, there will be two versions of the code. The simpler one, replaces the prints that would've been done on a LCD screen by prints on the serial monitor. The second one does all taks as if the project had all parts (lamps, LCD screen, relays, etc).\
   Although there were made several researches on scientific literature to create this solution and to guarantee the aplicability to the real world, this is a **case study** and maybe this is not enough to eliminate completely the viral load on such objects.\
   The project as a whole was developed by Arthur Belli (me), Alessandro Alves, Daniel Milagre, Luis Bertolani and Matheus Archangelo.
+\
+\
+## QUESTÕES TÉCNICAS
+  Os arquivos disponibilizados devem ser renomeados para ``` main.cpp ``` para poderem ser compilados e enviados para a placa Arduino. Vale notar também que o projeto faz uso da biblioteca LiquidCrystal, sendo necessário o download e a instalação dessa biblioteca para seu pleno funcionamento. [Link para download da lib](https://www.arduinolibraries.info/libraries/liquid-crystal).
+  
+## TECHNICAL POINTS
+  These files must be renamed as ``` main.cpp ``` to be compiled and sent to the Arduino board. Its worth mentioning too that this project uses the LiquidCrystal library, so, in order for it to run properly, you need to download and install this lib. [Link to download the lib](https://www.arduinolibraries.info/libraries/liquid-crystal).
+  
+  
